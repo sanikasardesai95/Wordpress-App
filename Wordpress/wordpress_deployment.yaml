@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: wordpress
-  replicas: 2
+  replicas: 3
   template:
     metadata:
       labels:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: wordpress
-        image: wordpress:latest
+        image: wordpress: 3.7
         env:
         - name: WORDPRESS_DB_HOST
           value: mariadb.mariadb.svc.cluster.local
